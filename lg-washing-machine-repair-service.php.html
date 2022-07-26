@@ -166,20 +166,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <h1 class="ttm-textcolor-white font-w-500">Best <span class="repair">LG</span> Washing Machine Service & Repair</h1>
                         <p style="font-size: 20px;color: #fff;">WELCOME TO  <span style="color:#ffffff;">LIFE COOL ENGINEERING</span></p>
                     </div> 
-                      <form id="ttm-quote-form" class="ttm-quote-form wrap-form clearfix" method="post" action="senquiry.php">
+                      <form id="ttm-quote-form" class="ttm-quote-form wrap-form clearfix">
                                 <div class="row justify-content-center pr-10 pl-10">
                                     <div class="col-lg-3 pr-5 pl-5">
                                         <label>
-                                            <span class="text-input"><input style="border-radius: 5px;" name="name" type="text" value="" placeholder="Name" required="required" onblur="_gaq.push(['_trackEvent', 'innerform', 'typed',this.value])"></span>
+                                            <span class="text-input"><input style="border-radius: 5px;" id="name" name="name" type="text" value="" placeholder="Name" required="required" onblur="_gaq.push(['_trackEvent', 'innerform', 'typed',this.value])"></span>
                                         </label>
                                     </div>
                                     <div class="col-lg-3 pr-5 pl-5">
                                         <label>
-                                            <span class="text-input"><input style="border-radius: 5px;" name="phone" type="number" value="" placeholder="Phone Number" required="required" onblur="_gaq.push(['_trackEvent', 'innerform', 'typed',this.value])"></span>
+                                            <span class="text-input"><input style="border-radius: 5px;" id="phone" name="phone" type="number" value="" placeholder="Phone Number" required="required" onblur="_gaq.push(['_trackEvent', 'innerform', 'typed',this.value])"></span>
                                         </label>
                                     </div>
                             <div class="col-lg-3 pr-5 pl-5">
-                                <input style="border-radius: 5px;height:48px;" name="submit" type="submit" id="submit" class="submit" value="Book Now">
+                                <input style="border-radius: 5px;height:48px;" name="submit" type="submit" id="submit" class="submit" value="Book Now" onclick="gotowhatsapp()">
                             </div>
                                 </div>
                             </form>  
@@ -420,6 +420,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/numinate.min6959.js?ver=4.9.3"></script>
     <script src="js/main.js"></script>
+    <script>
+        function gotowhatsapp() {
+            
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var service = document.getElementById("service").value;
+        
+            var url = "https://wa.me/919747399802?text=" 
+            + "Name: " + name + "%0a"
+            + "Phone: " + phone ;
+        
+            window.open(url, '_blank').focus();
+        }
+        </script>
    
     <!-- Revolution Slider -->
   <!--  <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
